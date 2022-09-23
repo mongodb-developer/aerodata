@@ -81,9 +81,9 @@ public class AerodataApplication implements CommandLineRunner {
         System.out.println();
         
         // fetch Aircraft Documents specific to aircraft "a36f7e"
-        System.out.println("Aircraft found with findAircraftDataByIcaoAddr(\"a36f7e\"):");
+        System.out.println("Aircraft found with findAircraftDataByIcaoAddr(\"DAL_a36f7e\"):");
         System.out.println("-------------------------------");
-        for (Aircraft aircraft : aircraftRepo.findAircraftDataByIcaoAddr("a36f7e")) {
+        for (Aircraft aircraft : aircraftRepo.findAircraftDataByIcaoAddr("DAL_a36f7e")) {
             System.out.println(aircraft);
         }
         
@@ -106,9 +106,9 @@ public class AerodataApplication implements CommandLineRunner {
         System.out.println();
         
         // fetch ADSB Documents specific to aircraft "a36f7e"
-        System.out.println("ADSB Documents found with findADSBDataByIcaoAddr(\"a36f7e\"):");
+        System.out.println("ADSB Documents found with findADSBDataByIcaoAddr(\"DAL_a36f7e\"):");
         System.out.println("-------------------------------");
-        for (ADSBRecord adsb : adsbRepo.findADSBDataByIcaoAddr("a36f7e")) {
+        for (ADSBRecord adsb : adsbRepo.findADSBDataByIcaoAddr("DAL_a36f7e")) {
             System.out.println(adsb);
         }
         

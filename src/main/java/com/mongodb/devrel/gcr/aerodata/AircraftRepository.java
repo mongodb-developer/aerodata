@@ -9,7 +9,7 @@ public interface AircraftRepository extends MongoRepository<Aircraft, String>{
     @Query("{_class: \"AircraftData\"}")
     List<Aircraft> findAllAircraft();
     
-    @Query("{_id: /^.*?0/, _class: \"AircraftData\"}")
+    @Query("{_id: /^?0/, _class: \"AircraftData\"}")
     List<Aircraft> findAircraftDataByIcaoAddr(String icaoAddr);
     
 }

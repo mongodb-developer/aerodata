@@ -9,7 +9,7 @@ public interface ADSBRecordRepository extends MongoRepository<ADSBRecord, String
     @Query(value="{_class: \"ADSBRecord\"}",sort="{_id: 1}")
     List<ADSBRecord> findAllADSBRecords();
     
-    @Query(value="{_id: /^.*?0/, _class: \"ADSBRecord\"}", sort = "{_id: 1}")
+    @Query(value="{_id: /^?0/, _class: \"ADSBRecord\"}", sort = "{_id: 1}")
     List<ADSBRecord> findADSBDataByIcaoAddr(String icaoAddr);
     
 }
